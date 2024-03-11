@@ -19,4 +19,4 @@ if len(sys.argv) >= 3:
     file_handler.modify()
     file_handler.save_data_to_output_file()
 else:
-    print("You provided too many or less arguments than expected (3)")
+    print("You provided less arguments than expected (3)")
