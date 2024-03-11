@@ -26,7 +26,11 @@ class FileHandler:
     def modify(self):
         for modification in self.changes:
             modification_list = modification.split(",")
-            column = int(modification_list[0])
-            row = int(modification_list[1])
-            value = modification_list[2]
-            self.content[row][column] = value
+            if modification_list[0].isnumeric() and modification_list[1].isnumeric():
+                column = int(modification_list[0])
+                row = int(modification_list[1])
+                value = modification_list[2]
+                self.content[row][column] = value
+            else:
+                print("Row and/or column must be numeric !")
+                break
