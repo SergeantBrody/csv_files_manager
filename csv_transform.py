@@ -7,7 +7,7 @@ def load_system_arguments():
     return sys.argv[1], sys.argv[2], sys.argv[3:]
 
 
-print(len(sys.argv))
+
 if len(sys.argv) >= 3:
     input_file, output_file, changes = load_system_arguments()
 
@@ -19,4 +19,4 @@ if len(sys.argv) >= 3:
     file_handler.modify()
     file_handler.save_data_to_output_file()
 else:
-    print("You provided less arguments than expected (3)")
+    print("You provided less arguments than expected (3 or more)")
